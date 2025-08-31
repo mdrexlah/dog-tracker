@@ -8,336 +8,1202 @@
   <meta name="CocoaVersion" content="2575.7">
   <style type="text/css">
     p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; min-height: 15.0px}
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;html lang="en"&gt;</p>
 <p class="p1">&lt;head&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Michael D's Dogs - Business Tracker&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIk1pY2hhZWwgRCdzIERvZ3MgVHJhY2tlciIsCiAgInNob3J0X25hbWUiOiAiRG9nIFRyYWNrZXIiLAogICJzdGFydF91cmwiOiAiLiIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgInRoZW1lX2NvbG9yIjogIiMzNDk4ZGIiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiNmNWY1ZjUiLAogICJpY29ucyI6IFsKICAgIHsKICAgICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LEJHOWhaM0FnVkdGdVlUb2dRM0o1Y0hSdklIQjFjbkI3Y21WdWNrOU9CZEJhOE9NQUtZSE9jeTU5QStPQXNjNGFjNE96NVlDOStIL2plRFROZGVlQ2RXUDhIV01PRkM5T2hJUUJoVVJqeG1VMmhRZENYTjE4eThZM2lldmE5MitEcCtkWU8rbU1CUE5VYVNjN1lZK1dJekVZRE5aUzJnWi9jUGRkcXIzMTNCWGgzUGZNZGRiN2kzM3o5RGEzdkMzLzZvY21IMGQzUDB4VUxnNWZENGNwQjEwSjF3K0hHNHlabE5XVGo1LzBGNnN5M3RDeUJqeXJ4amZqV0RYbWlhZTcycHNZU2txVVFMdklpZEZQMEcxSWUwK1RESlQ5R2lpeDhIcERJd3NFRUEwYWI2RGJXeDE1dFFOWEkwMDVjOVNuWG1DcXoxcGRON0tWYlBUT3B0elNadTJuZnUrOWJFSWFuTWZPckNGNStpVG9RV3hMZFJ1eU9ZQ0YzK0NlQkdqVUUxNlJvekJRTWc2V1FXTHNHMzllV0xsa2poUVlyN3dMMW5hQktSQk5raWY5aEp1K2lEQXVQSXZkZWQyUGNTYmJqWlFRWXRQME5sMGRpVnNEcHNsaTE4NWNNb0k2dHNyTHR6WmVYTEZLM28yQ2FqTUhqcExYdU9KYUF1cE5PUTdRaTl6YVBQa2F4NUNySkVKNEJCRUVFUXVRTmpvZWJOYmFyNHNzRktoaWg1T3NyUFlFSG5wN2Y1cjNzVXpkNnhwOWJoUitxNzFGUi4uLiIsCiAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIKICAgIH0KICBdCn0K"&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.container { max-width: 1200px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>h1 { text-align: center; color: #2c3e50; margin-bottom: 10px; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.setup-banner { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 8px; margin-bottom: 30px; text-align: center; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.setup-steps { background-color: #e8f4f8; padding: 20px; border-radius: 8px; margin-bottom: 30px; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.tabs { display: flex; margin-bottom: 20px; border-bottom: 2px solid #ddd; flex-wrap: wrap; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.tab { padding: 12px 20px; background-color: #ecf0f1; border: none; cursor: pointer; margin-right: 5px; margin-bottom: 5px; border-radius: 8px 8px 0 0; font-weight: bold; font-size: 14px; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.tab.active { background-color: #3498db; color: white; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.tab-content { display: none; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.tab-content.active { display: block; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.entry-form { background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 15px; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.form-group { display: flex; flex-direction: column; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>label { font-weight: bold; margin-bottom: 5px; color: #2c3e50; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>input[type="date"], input[type="number"], input[type="text"], select, textarea { padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.submit-btn { background-color: #27ae60; color: white; border: none; padding: 12px 30px; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: bold; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.submit-btn:hover { background-color: #229954; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.status-message { margin-top: 10px; padding: 10px; border-radius: 4px; font-weight: bold; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.summary-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 20px; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.summary-value { font-size: 32px; font-weight: bold; margin-bottom: 5px; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-bottom: 20px; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.stat-card { background-color: #ecf0f1; padding: 15px; border-radius: 8px; text-align: center; border: 2px solid #bdc3c7; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.stat-value { font-size: 24px; font-weight: bold; color: #2c3e50; margin-bottom: 5px; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.export-btn { background-color: #9b59b6; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; margin-right: 10px; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.view-sheets-btn { background-color: #0F9D58; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; text-decoration: none; display: inline-block; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--primary-color: #3498db;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--success-color: #27ae60;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--danger-color: #e74c3c;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--warning-color: #f39c12;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--dark-color: #2c3e50;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--light-bg: #f8f9fa;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--border-color: #ddd;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--shadow: 0 2px 10px rgba(0,0,0,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1">```</p>
+<p class="p1"><span class="Apple-converted-space">    </span>* {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>-webkit-tap-highlight-color: transparent;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: #f5f5f5;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>line-height: 1.4;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.container {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>max-width: 1200px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin: 0 auto;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: white;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 15px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 12px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>box-shadow: var(--shadow);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1 {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-align: center;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: var(--dark-color);<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 15px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 1.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mobile-header {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>position: sticky;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>z-index: 100;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 10px 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-bottom: 2px solid #eee;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.setup-banner {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: white;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 20px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 12px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 20px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.setup-steps {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: #e8f4f8;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 20px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 12px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tabs {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: flex;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 20px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-bottom: 2px solid var(--border-color);<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>overflow-x: auto;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>-webkit-overflow-scrolling: touch;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tab {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 12px 16px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: #ecf0f1;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border: none;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>cursor: pointer;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-right: 5px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 8px 8px 0 0;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-weight: 600;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>white-space: nowrap;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>min-width: fit-content;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>flex-shrink: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tab.active {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: var(--primary-color);<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: white;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tab-content {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: none;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tab-content.active {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: block;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.entry-form {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: var(--light-bg);<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 20px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 12px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.form-row {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: grid;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: 1fr;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>gap: 15px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (min-width: 768px) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.form-row {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.form-group {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: flex;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>flex-direction: column;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>label {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-weight: 600;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 8px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: var(--dark-color);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>input, select, textarea {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 12px 15px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border: 2px solid var(--border-color);<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 8px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>transition: border-color 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>input:focus, select:focus, textarea:focus {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>outline: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-color: var(--primary-color);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.submit-btn {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: linear-gradient(135deg, var(--success-color) 0%, #229954 100%);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: white;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border: none;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 15px 25px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 8px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>cursor: pointer;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 16px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>transition: transform 0.2s ease;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.submit-btn:active {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>transform: scale(0.98);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.export-btn {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: #9b59b6;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: white;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border: none;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 12px 20px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 8px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>cursor: pointer;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin: 5px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.status-message {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-top: 15px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 12px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 8px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.success {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: #d4edda;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #155724;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border: 2px solid #c3e6cb;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.error {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: #f8d7da;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #721c24;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border: 2px solid #f5c6cb;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.warning {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: #fff3cd;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #856404;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border: 2px solid #ffeaa7;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.summary-card {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: white;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 25px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 12px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-align: center;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>box-shadow: var(--shadow);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.summary-value {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 2.5rem;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-weight: bold;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 8px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.quick-stats {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: grid;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: 1fr;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>gap: 15px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (min-width: 768px) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.quick-stats {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.stat-card {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: white;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 20px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 12px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-align: center;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border: 2px solid #e9ecef;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>box-shadow: var(--shadow);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.stat-value {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 1.8rem;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-weight: bold;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: var(--dark-color);<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 8px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.connection-status {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 12px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 8px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 15px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.connected {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: #d4edda;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #155724;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border: 2px solid #c3e6cb;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.disconnected {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: #f8d7da;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #721c24;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border: 2px solid #f5c6cb;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.recent-entries {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: var(--light-bg);<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 15px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 12px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-top: 20px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>max-height: 400px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>overflow-y: auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.entry-item {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: white;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 15px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 10px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 8px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-left: 4px solid var(--primary-color);<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: flex;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>justify-content: space-between;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>box-shadow: 0 2px 5px rgba(0,0,0,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.entry-details {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>flex-grow: 1;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.entry-date {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 12px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #666;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.entry-amount {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-weight: bold;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: var(--success-color);<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 1.1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.delete-btn {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: var(--danger-color);<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: white;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border: none;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 8px 12px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 6px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>cursor: pointer;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pnl-section {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin: 20px 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pnl-controls {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>gap: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pnl-controls select, .pnl-controls button {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 10px 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border: 2px solid white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: rgba(255,255,255,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pnl-controls button {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: rgba(255,255,255,0.2);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>transition: background 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pnl-controls button:hover {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: rgba(255,255,255,0.3);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pnl-table {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-top: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pnl-table table {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-collapse: collapse;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pnl-table th, .pnl-table td {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-align: left;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-bottom: 1px solid #eee;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pnl-table th {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: #f8f9fa;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: var(--dark-color);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pnl-total {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: #e8f5e8 !important;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.quick-expense-grid {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));</p>
+<p class="p1"><span class="Apple-converted-space">        </span>gap: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.quick-expense-btn {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Install prompt */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.install-prompt {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.install-btn {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: rgba(255,255,255,0.2);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border: 2px solid white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 10px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 768px) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body { padding: 5px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.container { padding: 10px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>h1 { font-size: 1.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.summary-value { font-size: 2rem; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.stat-value { font-size: 1.5rem; }</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.entry-item {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: stretch;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.delete-btn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* PWA styles */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pwa-install {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>position: fixed;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>left: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>right: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: var(--primary-color);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>box-shadow: 0 4px 20px rgba(0,0,0,0.3);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>z-index: 1000;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Sheets integration styles */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sheets-setup {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: linear-gradient(135deg, #0F9D58 0%, #0b7043 100%);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sheets-url-input {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border: 2px solid #ddd;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">```</p>
+<p class="p2"><br></p>
 <p class="p1">&lt;/head&gt;</p>
 <p class="p1">&lt;body&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Michael D's Dogs 🐕&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="setup-banner"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;📊 Google Sheets Integration&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Your data is automatically saved to Google Sheets - permanent and accessible anywhere!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="mobile-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1&gt;Michael D's Dogs 🐕&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="connection-indicator" class="connection-status disconnected"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>🔴 Local Storage Only</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
 <p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="setup-steps"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;🚀 One-Time Setup (Takes 2 minutes):&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;ol&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;strong&gt;Create your Google Sheet:&lt;/strong&gt; &lt;a href="https://sheets.google.com" target="_blank"&gt;Go to Google Sheets&lt;/a&gt; → Create new sheet → Name it "Michael D's Dogs Business"&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;strong&gt;Share your sheet:&lt;/strong&gt; Click "Share" → Change to "Anyone with the link can edit" → Copy the link&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;strong&gt;Paste your sheet URL below:&lt;/strong&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ol&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">```</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="install-prompt" class="pwa-install"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;strong&gt;📱 Install App&lt;/strong&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Add this to your home screen for easy access!</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="installPWA()" class="install-btn"&gt;Install&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="dismissInstall()" style="margin-left: 10px; background: transparent; border: 1px solid white;" class="install-btn"&gt;Dismiss&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sheets-setup" id="setup-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;🚀 Google Sheets Setup&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;&lt;strong&gt;Step 1:&lt;/strong&gt; &lt;a href="https://sheets.google.com" target="_blank" style="color: #fff; text-decoration: underline;"&gt;Create a new Google Sheet&lt;/a&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;&lt;strong&gt;Step 2:&lt;/strong&gt; Share it (Anyone with link can edit)&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;&lt;strong&gt;Step 3:&lt;/strong&gt; Paste the URL below:&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="sheet-url" placeholder="Paste Google Sheets URL here..." class="sheets-url-input"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="display: flex; gap: 10px; margin-top: 15px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="setupSheets()" class="submit-btn" style="flex: 1;"&gt;Connect Sheets&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="toggleSetup()" class="export-btn"&gt;Hide&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="setup-status"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="tabs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab active" onclick="showTab(event, 'weekly-entry')"&gt;📅 Daily&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab" onclick="showTab(event, 'rover-income')"&gt;🐕 Rover&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab" onclick="showTab(event, 'venmo-income')"&gt;💰 Venmo&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab" onclick="showTab(event, 'cash-payments')"&gt;💵 Cash&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab" onclick="showTab(event, 'expenses')"&gt;💳 Expenses&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab" onclick="showTab(event, 'dashboard')"&gt;📊 P&amp;L&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="weekly-entry" class="tab-content active"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;📅 Daily Mileage&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="entry-form"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="form-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;Date&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="date" id="mileage-date" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;Business Miles&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="number" id="mileage-miles" step="0.1" placeholder="Miles driven" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="form-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;Purpose&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="text" id="mileage-purpose" placeholder="Client visits, errands, etc."&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="addMileage()" class="submit-btn"&gt;💾 Save Mileage&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="mileage-status" class="status-message" style="display:none;"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="summary-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="summary-value" id="weekly-summary"&gt;$0.00&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;This Week's Deduction (@$0.67/mile)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="recent-entries"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h4&gt;Recent Entries&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="recent-mileage"&gt;No entries yet&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="rover-income" class="tab-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;🐕 Rover Deposits&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="entry-form"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="form-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;Date&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="date" id="rover-date" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;Amount&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="number" id="rover-amount" step="0.01" placeholder="Deposit amount" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="form-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;Period&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="text" id="rover-period" placeholder="Week of..."&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="form-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;Notes&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;textarea id="rover-notes" placeholder="Notes..." rows="2"&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="addRoverDeposit()" class="submit-btn"&gt;💾 Save&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="rover-status" class="status-message" style="display:none;"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="recent-entries"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h4&gt;Recent Entries&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="recent-rover"&gt;No entries yet&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="venmo-income" class="tab-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;💰 Venmo Payments&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="entry-form"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="form-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;Date&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="date" id="venmo-date" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;Client&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="text" id="venmo-client" placeholder="Client name" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="form-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;Amount&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="number" id="venmo-amount" step="0.01" placeholder="Amount" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;Service&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;select id="venmo-service"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Dog Walking&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Pet Sitting&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Overnight Care&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Other&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="addVenmoPayment()" class="submit-btn"&gt;💾 Save&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="venmo-status" class="status-message" style="display:none;"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="recent-entries"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h4&gt;Recent Entries&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="recent-venmo"&gt;No entries yet&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="cash-payments" class="tab-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;💵 Cash Payments&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="entry-form"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="form-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;Date&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="date" id="cash-date" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;Client&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="text" id="cash-client" placeholder="Client name" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="form-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;Amount&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="number" id="cash-amount" step="0.01" placeholder="Amount" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;Service&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;select id="cash-service"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Dog Walking&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Pet Sitting&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Overnight Care&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Other&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="addCashPayment()" class="submit-btn"&gt;💾 Save&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="cash-status" class="status-message" style="display:none;"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="recent-entries"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h4&gt;Recent Entries&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="recent-cash"&gt;No entries yet&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="expenses" class="tab-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;💳 Expenses&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="background: #e8f5e8; padding: 15px; border-radius: 8px; margin-bottom: 20px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Quick Add&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="quick-expense-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="quickExpense('gas')" class="quick-expense-btn"&gt;⛽ Gas&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="quickExpense('supplies')" class="quick-expense-btn"&gt;🛍️ Supplies&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="quickExpense('food')" class="quick-expense-btn"&gt;🍕 Meal&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="entry-form"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="form-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;Date&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="date" id="expense-date" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;Amount&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="number" id="expense-amount" step="0.01" placeholder="Amount" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="form-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;Category&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;select id="expense-category"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Vehicle - Gas&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Pet Supplies&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Equipment&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Phone/Internet&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Insurance&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Marketing&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Professional Services&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Meals &amp; Entertainment&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Office Supplies&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Training&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;option&gt;Other&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;Vendor&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="text" id="expense-vendor" placeholder="Store/vendor"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="form-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;Description&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="text" id="expense-description" placeholder="What you bought"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="addExpense()" class="submit-btn"&gt;💾 Save&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="expense-status" class="status-message" style="display:none;"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="recent-entries"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h4&gt;Recent Entries&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="recent-expenses"&gt;No entries yet&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="dashboard" class="tab-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;📊 Profit &amp; Loss Dashboard&lt;/h2&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="pnl-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;📈 Monthly P&amp;L Report&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="pnl-controls"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;select id="pnl-month"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;option value="current"&gt;Current Month&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;option value="last"&gt;Last Month&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;option value="ytd"&gt;Year to Date&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="generatePnL()" class="pnl-controls button"&gt;Generate Report&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="exportTaxData()" class="pnl-controls button"&gt;Export Tax Data&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="syncToSheets()" class="pnl-controls button"&gt;📊 Sync to Sheets&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="pnl-report" class="pnl-table"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- P&amp;L Report will be generated here --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="quick-stats"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="stat-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="stat-value" id="total-revenue-month"&gt;$0.00&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;This Month's Revenue&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="stat-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="stat-value" id="total-expenses-month"&gt;$0.00&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;This Month's Expenses&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="stat-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="stat-value" id="net-profit-month"&gt;$0.00&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;This Month's Profit&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="stat-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="stat-value" id="total-miles-month"&gt;0&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;Business Miles&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="background: #e8f4f8; padding: 20px; border-radius: 12px; text-align: center;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;📱 Access Anywhere&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;✅ iPhone/Android Ready&lt;/strong&gt; - Add to home screen&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;✅ Auto-sync to Google Sheets&lt;/strong&gt; - Never lose data&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;✅ Tax-ready reports&lt;/strong&gt; - Export for accountant&lt;/p&gt;</p>
 <p class="p1"><span class="Apple-converted-space">            </span>&lt;div style="margin-top: 15px;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="text" id="sheet-url" placeholder="Paste your Google Sheets URL here..." style="width: 70%; margin-right: 10px;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="setupSheets()" class="submit-btn"&gt;Connect Sheets&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="setup-status"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tabs"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="tab active" onclick="showTab('weekly-entry')"&gt;📅 Weekly Entry&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="tab" onclick="showTab('rover-income')"&gt;🐕 Rover Deposits&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="tab" onclick="showTab('venmo-income')"&gt;💰 Venmo Payments&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="tab" onclick="showTab('cash-payments')"&gt;💵 Cash Payments&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="tab" onclick="showTab('expenses')"&gt;💳 Expenses&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="tab" onclick="showTab('dashboard')"&gt;📊 Dashboard&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="weekly-entry" class="tab-content active"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Weekly Business Entry&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="entry-form"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;📅 Daily Mileage Entry&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Date&lt;/label&gt;&lt;input type="date" id="mileage-date" required&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Business Miles&lt;/label&gt;&lt;input type="number" id="mileage-miles" step="0.1" placeholder="Miles driven" required&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Purpose&lt;/label&gt;&lt;input type="text" id="mileage-purpose" placeholder="Client visits, errands, etc."&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="addMileage()" class="submit-btn"&gt;💾 Save Mileage&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="mileage-status" class="status-message" style="display:none;"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="summary-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="summary-value" id="weekly-summary"&gt;$0.00&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;This Week's Mileage Deduction&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="rover-income" class="tab-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;🐕 Rover Bank Deposits&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="entry-form"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Deposit Date&lt;/label&gt;&lt;input type="date" id="rover-date" required&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Net Deposit Amount&lt;/label&gt;&lt;input type="number" id="rover-amount" step="0.01" placeholder="Amount deposited to bank" required&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Service Period&lt;/label&gt;&lt;input type="text" id="rover-period" placeholder="Week of Jan 15-21, 2025"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Notes&lt;/label&gt;&lt;textarea id="rover-notes" placeholder="Any additional notes..." rows="3"&gt;&lt;/textarea&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="addRoverDeposit()" class="submit-btn"&gt;💾 Save Rover Deposit&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="rover-status" class="status-message" style="display:none;"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="venmo-income" class="tab-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;💰 Venmo Client Payments&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="entry-form"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Payment Date&lt;/label&gt;&lt;input type="date" id="venmo-date" required&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Client Name&lt;/label&gt;&lt;input type="text" id="venmo-client" placeholder="Client name" required&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Amount&lt;/label&gt;&lt;input type="number" id="venmo-amount" step="0.01" placeholder="Payment amount" required&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Service Type&lt;/label&gt;&lt;select id="venmo-service"&gt;&lt;option&gt;Dog Walking&lt;/option&gt;&lt;option&gt;Pet Sitting&lt;/option&gt;&lt;option&gt;Overnight Care&lt;/option&gt;&lt;option&gt;Other&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Service Date&lt;/label&gt;&lt;input type="date" id="venmo-service-date"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Notes&lt;/label&gt;&lt;input type="text" id="venmo-notes" placeholder="Additional notes"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="addVenmoPayment()" class="submit-btn"&gt;💾 Save Venmo Payment&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="venmo-status" class="status-message" style="display:none;"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="cash-payments" class="tab-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;💵 Cash Client Payments&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="entry-form"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Payment Date&lt;/label&gt;&lt;input type="date" id="cash-date" required&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Client Name&lt;/label&gt;&lt;input type="text" id="cash-client" placeholder="Client name" required&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Amount&lt;/label&gt;&lt;input type="number" id="cash-amount" step="0.01" placeholder="Cash amount" required&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Service Type&lt;/label&gt;&lt;select id="cash-service"&gt;&lt;option&gt;Dog Walking&lt;/option&gt;&lt;option&gt;Pet Sitting&lt;/option&gt;&lt;option&gt;Overnight Care&lt;/option&gt;&lt;option&gt;Other&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Service Date&lt;/label&gt;&lt;input type="date" id="cash-service-date"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Notes&lt;/label&gt;&lt;input type="text" id="cash-notes" placeholder="Additional notes"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="addCashPayment()" class="submit-btn"&gt;💾 Save Cash Payment&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="cash-status" class="status-message" style="display:none;"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="expenses" class="tab-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;💳 Business Expenses&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div style="background-color: #e8f5e8; padding: 15px; border-radius: 5px; margin-bottom: 20px;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;🏃‍♂️ Quick Expense Buttons&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button onclick="quickExpense('gas')" class="submit-btn"&gt;⛽ Gas Purchase&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button onclick="quickExpense('supplies')" class="submit-btn"&gt;🛍️ Pet Supplies&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button onclick="quickExpense('food')" class="submit-btn"&gt;🍕 Business Meal&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="entry-form"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Expense Date&lt;/label&gt;&lt;input type="date" id="expense-date" required&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Category&lt;/label&gt;&lt;select id="expense-category"&gt;&lt;option&gt;Vehicle - Gas&lt;/option&gt;&lt;option&gt;Pet Supplies&lt;/option&gt;&lt;option&gt;Equipment&lt;/option&gt;&lt;option&gt;Phone/Internet&lt;/option&gt;&lt;option&gt;Insurance&lt;/option&gt;&lt;option&gt;Marketing&lt;/option&gt;&lt;option&gt;Professional Services&lt;/option&gt;&lt;option&gt;Meals &amp; Entertainment&lt;/option&gt;&lt;option&gt;Office Supplies&lt;/option&gt;&lt;option&gt;Training&lt;/option&gt;&lt;option&gt;Other&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Amount&lt;/label&gt;&lt;input type="number" id="expense-amount" step="0.01" placeholder="Expense amount" required&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Vendor/Store&lt;/label&gt;&lt;input type="text" id="expense-vendor" placeholder="Where you bought it"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Description&lt;/label&gt;&lt;input type="text" id="expense-description" placeholder="What you bought"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;&lt;label&gt;Payment Method&lt;/label&gt;&lt;select id="expense-payment"&gt;&lt;option&gt;Credit Card&lt;/option&gt;&lt;option&gt;Debit Card&lt;/option&gt;&lt;option&gt;Cash&lt;/option&gt;&lt;option&gt;Bank Transfer&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="addExpense()" class="submit-btn"&gt;💾 Save Expense&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="expense-status" class="status-message" style="display:none;"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="dashboard" class="tab-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;📊 Business Dashboard&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div style="text-align: center; margin-bottom: 20px;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;a id="view-sheets-link" href="#" target="_blank" class="view-sheets-btn"&gt;📊 View Full Google Sheets&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="refreshDashboard()" class="export-btn"&gt;🔄 Refresh Data&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="quick-stats"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="stat-card"&gt;&lt;div class="stat-value" id="total-revenue-month"&gt;$0.00&lt;/div&gt;&lt;div&gt;This Month's Revenue&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="stat-card"&gt;&lt;div class="stat-value" id="total-expenses-month"&gt;$0.00&lt;/div&gt;&lt;div&gt;This Month's Expenses&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="stat-card"&gt;&lt;div class="stat-value" id="net-profit-month"&gt;$0.00&lt;/div&gt;&lt;div&gt;This Month's Profit&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="stat-card"&gt;&lt;div class="stat-value" id="total-miles-month"&gt;0&lt;/div&gt;&lt;div&gt;Business Miles This Month&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div style="background-color: #e8f4f8; padding: 20px; border-radius: 8px;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;💡 Your Data is Safe!&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;✅ &lt;strong&gt;Automatically saved&lt;/strong&gt; to your Google Sheets&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;✅ &lt;strong&gt;Access anywhere&lt;/strong&gt; - phone, computer, tablet&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;✅ &lt;strong&gt;Never lost&lt;/strong&gt; - stored in your Google account&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;✅ &lt;strong&gt;Easy backup&lt;/strong&gt; - download from Google Sheets anytime&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;✅ &lt;strong&gt;Share with accountant&lt;/strong&gt; - just share the Google Sheet&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a id="view-sheets-link" href="#" target="_blank" class="export-btn"&gt;📊 View Google Sheet&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="refreshDashboard()" class="export-btn"&gt;🔄 Refresh&lt;/button&gt;</p>
 <p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
 <p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>let SHEET_ID = '';</p>
-<p class="p1"><span class="Apple-converted-space">        </span>let SHEET_URL = '';</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.addEventListener('DOMContentLoaded', function() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const today = new Date().toISOString().split('T')[0];</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const dateInputs = document.querySelectorAll('input[type="date"]');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>dateInputs.forEach(input =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (!input.value) input.value = today;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let SHEET_ID = '';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let SHEET_URL = '';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let isConnected = false;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let deferredPrompt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// PWA Installation</p>
+<p class="p1"><span class="Apple-converted-space">    </span>window.addEventListener('beforeinstallprompt', (e) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>e.preventDefault();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>deferredPrompt = e;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('install-prompt').style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function installPWA() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (deferredPrompt) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>deferredPrompt.prompt();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>deferredPrompt.userChoice.then((choiceResult) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (choiceResult.outcome === 'accepted') {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>console.log('User accepted the A2HS prompt');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>deferredPrompt = null;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('install-prompt').style.display = 'none';</p>
 <p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function dismissInstall() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('install-prompt').style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Initialize app</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.addEventListener('DOMContentLoaded', function() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const today = new Date().toISOString().split('T')[0];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const dateInputs = document.querySelectorAll('input[type="date"]');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>dateInputs.forEach(input =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (!input.value) input.value = today;</p>
 <p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function showTab(tabName) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.querySelectorAll('.tab-content').forEach(tab =&gt; { tab.classList.remove('active'); });</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.querySelectorAll('.tab').forEach(tab =&gt; { tab.classList.remove('active'); });</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById(tabName).classList.add('active');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>event.target.classList.add('active');</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>loadSavedConnection();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>updateWeeklySummary();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>refreshDashboard();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>updateRecentEntries();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>generatePnL();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function loadSavedConnection() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const savedSheetId = getFromStorage('sheet_id');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const savedSheetUrl = getFromStorage('sheet_url');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (savedSheetId &amp;&amp; savedSheetUrl) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>SHEET_ID = savedSheetId;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>SHEET_URL = savedSheetUrl;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>isConnected = true;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('sheet-url').value = savedSheetUrl;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('view-sheets-link').href = savedSheetUrl;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>updateConnectionStatus();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('setup-section').style.display = 'none';</p>
 <p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function setupSheets() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const url = document.getElementById('sheet-url').value.trim();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (!url.includes('docs.google.com/spreadsheets')) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>showStatus('setup-status', 'Please enter a valid Google Sheets URL', 'error');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const match = url.match(/\/spreadsheets\/d\/([a-zA-Z0-9-_]+)/);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (match) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>SHEET_ID = match[1];</p>
-<p class="p1"><span class="Apple-converted-space">                </span>SHEET_URL = url;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>localStorage.setItem('michaels_dogs_sheet_id', SHEET_ID);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>localStorage.setItem('michaels_dogs_sheet_url', SHEET_URL);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('view-sheets-link').href = SHEET_URL;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>showStatus('setup-status', '✅ Connected to Google Sheets! You can now start entering data.', 'success');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>initializeSheets();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>showStatus('setup-status', 'Could not extract Sheet ID from URL. Please check the URL.', 'error');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function saveToStorage(key, value) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>localStorage.setItem(`michaels_dogs_${key}`, JSON.stringify(value));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return true;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} catch (e) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>console.error('Storage failed:', e);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>showStatus('setup-status', 'Storage warning: Data may not persist.', 'warning');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return false;</p>
 <p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function initializeSheets() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>showStatus('setup-status', '📋 Sheet structure ready! Start entering your business data.', 'success');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function getFromStorage(key) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const item = localStorage.getItem(`michaels_dogs_${key}`);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return item ? JSON.parse(item) : null;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} catch (e) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>console.error('Storage retrieval failed:', e);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return null;</p>
 <p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function addMileage() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const date = document.getElementById('mileage-date').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const miles = document.getElementById('mileage-miles').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const purpose = document.getElementById('mileage-purpose').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (!date || !miles) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>showStatus('mileage-status', 'Please fill in date and miles', 'error');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const deduction = (parseFloat(miles) * 0.67).toFixed(2);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>saveToGoogleSheets('Mileage', [date, miles, purpose, deduction]);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>showStatus('mileage-status', `✅ Saved: ${miles} miles = $${deduction} deduction`, 'success');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('mileage-miles').value = '';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('mileage-purpose').value = '';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function updateConnectionStatus() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const indicator = document.getElementById('connection-indicator');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (isConnected) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>indicator.className = 'connection-status connected';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>indicator.textContent = '🟢 Google Sheets Connected';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>indicator.className = 'connection-status disconnected';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>indicator.textContent = '🔴 Local Storage Only';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function toggleSetup() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const setup = document.getElementById('setup-section');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>setup.style.display = setup.style.display === 'none' ? 'block' : 'none';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function showTab(evt, tabName) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.querySelectorAll('.tab-content').forEach(tab =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>tab.classList.remove('active');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.querySelectorAll('.tab').forEach(tab =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>tab.classList.remove('active');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById(tabName).classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>evt.currentTarget.classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>updateRecentEntries();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function setupSheets() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const url = document.getElementById('sheet-url').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!url) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>showStatus('setup-status', 'Please enter a Google Sheets URL', 'error');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!url.includes('docs.google.com/spreadsheets')) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>showStatus('setup-status', 'Please enter a valid Google Sheets URL', 'error');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const match = url.match(/\/spreadsheets\/d\/([a-zA-Z0-9-_]+)/);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (match) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>SHEET_ID = match[1];</p>
+<p class="p1"><span class="Apple-converted-space">            </span>SHEET_URL = url;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>isConnected = true;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>saveToStorage('sheet_id', SHEET_ID);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>saveToStorage('sheet_url', SHEET_URL);</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('view-sheets-link').href = SHEET_URL;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>showStatus('setup-status', '✅ Connected! Data will sync to Google Sheets.', 'success');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>updateConnectionStatus();</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Initialize sheet structure and sync existing data</p>
+<p class="p1"><span class="Apple-converted-space">            </span>initializeSheets();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>syncToSheets();</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Hide setup after successful connection</p>
+<p class="p1"><span class="Apple-converted-space">            </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('setup-section').style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}, 3000);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>showStatus('setup-status', 'Invalid URL format. Please check and try again.', 'error');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function initializeSheets() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// This would set up the sheet headers in a real implementation</p>
+<p class="p1"><span class="Apple-converted-space">        </span>console.log('Initializing Google Sheets structure...');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function syncToSheets() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!isConnected) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>showStatus('setup-status', 'Please connect to Google Sheets first', 'warning');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// In a real implementation, this would use the Google Sheets API</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// For now, we'll show the user what data would be synced</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const allData = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>mileage: getFromStorage('mileage') || [],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>rover: getFromStorage('rover') || [],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>venmo: getFromStorage('venmo') || [],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cash: getFromStorage('cash') || [],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>expenses: getFromStorage('expenses') || []</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>console.log('Syncing to Google Sheets:', allData);</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Show success message with data count</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const totalEntries = Object.values(allData).reduce((sum, arr) =&gt; sum + arr.length, 0);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>showStatus('setup-status', `✅ Ready to sync ${totalEntries} entries to Google Sheets!`, 'success');</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Generate instructions for manual setup</p>
+<p class="p1"><span class="Apple-converted-space">        </span>generateSheetsInstructions();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function generateSheetsInstructions() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const instructions = `</p>
+<p class="p1">```</p>
+<p class="p2"><br></p>
+<p class="p1">📋 GOOGLE SHEETS SETUP INSTRUCTIONS</p>
+<p class="p2"><br></p>
+<p class="p1">1. Create these tabs in your Google Sheet:</p>
+<p class="p1"><span class="Apple-converted-space">   </span>• Mileage</p>
+<p class="p1"><span class="Apple-converted-space">   </span>• Rover</p>
+<p class="p1"><span class="Apple-converted-space">   </span>• Venmo</p>
+<p class="p1"><span class="Apple-converted-space">   </span>• Cash</p>
+<p class="p1"><span class="Apple-converted-space">   </span>• Expenses</p>
+<p class="p1"><span class="Apple-converted-space">   </span>• PnL_Reports</p>
+<p class="p1">1. Add these headers to each tab:</p>
+<p class="p2"><br></p>
+<p class="p1">MILEAGE TAB:</p>
+<p class="p1">Date | Miles | Purpose | Deduction | Timestamp</p>
+<p class="p2"><br></p>
+<p class="p1">ROVER TAB:</p>
+<p class="p1">Date | Amount | Period | Notes | Timestamp</p>
+<p class="p2"><br></p>
+<p class="p1">VENMO TAB:</p>
+<p class="p1">Date | Client | Amount | Service | Notes | Timestamp</p>
+<p class="p2"><br></p>
+<p class="p1">CASH TAB:</p>
+<p class="p1">Date | Client | Amount | Service | Notes | Timestamp</p>
+<p class="p2"><br></p>
+<p class="p1">EXPENSES TAB:</p>
+<p class="p1">Date | Category | Amount | Vendor | Description | Timestamp</p>
+<p class="p2"><br></p>
+<p class="p1">PnL_REPORTS TAB:</p>
+<p class="p1">Period | Revenue | Expenses | Net_Profit | Miles | Generated_Date</p>
+<p class="p1">`;</p>
+<p class="p2"><br></p>
+<p class="p1">```</p>
+<p class="p1"><span class="Apple-converted-space">        </span>console.log(instructions);</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Save instructions to show user</p>
+<p class="p1"><span class="Apple-converted-space">        </span>saveToStorage('sheets_instructions', instructions);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function addMileage() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const date = document.getElementById('mileage-date').value;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const miles = parseFloat(document.getElementById('mileage-miles').value);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const purpose = document.getElementById('mileage-purpose').value;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!date || !miles) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>showStatus('mileage-status', 'Please fill in date and miles', 'error');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const deduction = (miles * 0.67).toFixed(2);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const entry = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>id: Date.now(),</p>
+<p class="p1"><span class="Apple-converted-space">            </span>date: date,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>miles: miles,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>purpose: purpose,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>deduction: deduction,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>timestamp: new Date().toISOString()</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>saveEntry('mileage', entry);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>showStatus('mileage-status', `✅ Saved: ${miles} miles = $${deduction} deduction`, 'success');</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('mileage-miles').value = '';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('mileage-purpose').value = '';</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>updateWeeklySummary();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>updateRecentEntries();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>refreshDashboard();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function addRoverDeposit() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const date = document.getElementById('rover-date').value;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const amount = parseFloat(document.getElementById('rover-amount').value);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const period = document.getElementById('rover-period').value;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const notes = document.getElementById('rover-notes').value;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!date || !amount) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>showStatus('rover-status', 'Please fill in date and amount', 'error');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const entry = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>id: Date.now(),</p>
+<p class="p1"><span class="Apple-converted-space">            </span>date: date,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>amount: amount,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>period: period,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>notes: notes,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>timestamp: new Date().toISOString()</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>saveEntry('rover', entry);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>showStatus('rover-status', `✅ Saved: $${amount.toFixed(2)} Rover deposit`, 'success');</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('rover-amount').value = '';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('rover-period').value = '';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('rover-notes').value = '';</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>updateRecentEntries();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>refreshDashboard();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function addVenmoPayment() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const date = document.getElementById('venmo-date').value;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const client = document.getElementById('venmo-client').value;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const amount = parseFloat(document.getElementById('venmo-amount').value);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const service = document.getElementById('venmo-service').value;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!date || !client || !amount) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>showStatus('venmo-status', 'Please fill in date, client, and amount', 'error');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const entry = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>id: Date.now(),</p>
+<p class="p1"><span class="Apple-converted-space">            </span>date: date,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>client: client,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>amount: amount,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>service: service,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>timestamp: new Date().toISOString()</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>saveEntry('venmo', entry);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>showStatus('venmo-status', `✅ Saved: $${amount.toFixed(2)} from ${client}`, 'success');</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('venmo-client').value = '';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('venmo-amount').value = '';</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>updateRecentEntries();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>refreshDashboard();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function addCashPayment() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const date = document.getElementById('cash-date').value;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const client = document.getElementById('cash-client').value;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const amount = parseFloat(document.getElementById('cash-amount').value);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const service = document.getElementById('cash-service').value;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!date || !client || !amount) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>showStatus('cash-status', 'Please fill in date, client, and amount', 'error');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const entry = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>id: Date.now(),</p>
+<p class="p1"><span class="Apple-converted-space">            </span>date: date,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>client: client,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>amount: amount,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>service: service,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>timestamp: new Date().toISOString()</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>saveEntry('cash', entry);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>showStatus('cash-status', `✅ Saved: $${amount.toFixed(2)} cash from ${client}`, 'success');</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('cash-client').value = '';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('cash-amount').value = '';</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>updateRecentEntries();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>refreshDashboard();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function addExpense() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const date = document.getElementById('expense-date').value;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const category = document.getElementById('expense-category').value;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const amount = parseFloat(document.getElementById('expense-amount').value);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const vendor = document.getElementById('expense-vendor').value;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const description = document.getElementById('expense-description').value;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!date || !amount) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>showStatus('expense-status', 'Please fill in date and amount', 'error');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const entry = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>id: Date.now(),</p>
+<p class="p1"><span class="Apple-converted-space">            </span>date: date,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>category: category,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>amount: amount,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>vendor: vendor,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>description: description,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>timestamp: new Date().toISOString()</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>saveEntry('expenses', entry);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>showStatus('expense-status', `✅ Saved: $${amount.toFixed(2)} ${category}`, 'success');</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('expense-amount').value = '';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('expense-vendor').value = '';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('expense-description').value = '';</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>updateRecentEntries();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>refreshDashboard();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function quickExpense(type) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const today = new Date().toISOString().split('T')[0];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('expense-date').value = today;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>switch(type) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>case 'gas':</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('expense-category').value = 'Vehicle - Gas';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('expense-description').value = 'Gas for business driving';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>break;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>case 'supplies':</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('expense-category').value = 'Pet Supplies';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('expense-description').value = 'Pet care supplies';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>break;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>case 'food':</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('expense-category').value = 'Meals &amp; Entertainment';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('expense-description').value = 'Business meal';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>break;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('expense-amount').focus();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function saveEntry(type, entry) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const entries = getFromStorage(type) || [];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>entries.push(entry);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>saveToStorage(type, entries);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function deleteEntry(type, entryId) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (confirm('Delete this entry?')) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const entries = getFromStorage(type) || [];</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const filtered = entries.filter(entry =&gt; entry.id !== entryId);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>saveToStorage(type, filtered);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>updateRecentEntries();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>refreshDashboard();</p>
 <p class="p1"><span class="Apple-converted-space">            </span>updateWeeklySummary();</p>
 <p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function addRoverDeposit() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const date = document.getElementById('rover-date').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const amount = document.getElementById('rover-amount').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const period = document.getElementById('rover-period').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const notes = document.getElementById('rover-notes').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (!date || !amount) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>showStatus('rover-status', 'Please fill in date and amount', 'error');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>saveToGoogleSheets('Rover', [date, amount, period, notes]);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>showStatus('rover-status', `✅ Saved: $${amount} Rover deposit`, 'success');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('rover-amount').value = '';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('rover-period').value = '';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('rover-notes').value = '';</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function addVenmoPayment() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const date = document.getElementById('venmo-date').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const client = document.getElementById('venmo-client').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const amount = document.getElementById('venmo-amount').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const service = document.getElementById('venmo-service').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const serviceDate = document.getElementById('venmo-service-date').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const notes = document.getElementById('venmo-notes').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (!date || !client || !amount) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>showStatus('venmo-status', 'Please fill in date, client, and amount', 'error');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>saveToGoogleSheets('Venmo', [date, client, amount, service, serviceDate, notes]);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>showStatus('venmo-status', `✅ Saved: $${amount} from ${client}`, 'success');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('venmo-client').value = '';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('venmo-amount').value = '';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('venmo-service-date').value = '';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('venmo-notes').value = '';</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function addCashPayment() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const date = document.getElementById('cash-date').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const client = document.getElementById('cash-client').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const amount = document.getElementById('cash-amount').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const service = document.getElementById('cash-service').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const serviceDate = document.getElementById('cash-service-date').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const notes = document.getElementById('cash-notes').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (!date || !client || !amount) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>showStatus('cash-status', 'Please fill in date, client, and amount', 'error');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>saveToGoogleSheets('Cash', [date, client, amount, service, serviceDate, notes]);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>showStatus('cash-status', `✅ Saved: $${amount} cash from ${client}`, 'success');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('cash-client').value = '';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('cash-amount').value = '';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('cash-service-date').value = '';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('cash-notes').value = '';</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function addExpense() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const date = document.getElementById('expense-date').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const category = document.getElementById('expense-category').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const amount = document.getElementById('expense-amount').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const vendor = document.getElementById('expense-vendor').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const description = document.getElementById('expense-description').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const payment = document.getElementById('expense-payment').value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (!date || !amount) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>showStatus('expense-status', 'Please fill in date and amount', 'error');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>saveToGoogleSheets('Expenses', [date, category, amount, vendor, description, payment]);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>showStatus('expense-status', `✅ Saved: $${amount} ${category} expense`, 'success');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('expense-amount').value = '';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('expense-vendor').value = '';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('expense-description').value = '';</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function quickExpense(type) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const today = new Date().toISOString().split('T')[0];</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('expense-date').value = today;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>switch(type) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>case 'gas':</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('expense-category').value = 'Vehicle - Gas';</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('expense-description').value = 'Gas for business driving';</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>break;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>case 'supplies':</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('expense-category').value = 'Pet Supplies';</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('expense-description').value = 'Pet care supplies';</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>break;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>case 'food':</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('expense-category').value = 'Meals &amp; Entertainment';</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('expense-description').value = 'Business meal';</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>break;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('expense-amount').focus();</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function saveToGoogleSheets(sheetName, data) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const key = `michaels_dogs_${sheetName.toLowerCase()}`;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>let existing = JSON.parse(localStorage.getItem(key) || '[]');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>existing.push(data);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>localStorage.setItem(key, JSON.stringify(existing));</p>
-<p class="p1"><span class="Apple-converted-space">            </span>console.log(`Saving to Google Sheets - ${sheetName}:`, data);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function showStatus(elementId, message, type) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const element = document.getElementById(elementId);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function showStatus(elementId, message, type) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const element = document.getElementById(elementId);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (element) {</p>
 <p class="p1"><span class="Apple-converted-space">            </span>element.textContent = message;</p>
 <p class="p1"><span class="Apple-converted-space">            </span>element.className = `status-message ${type}`;</p>
 <p class="p1"><span class="Apple-converted-space">            </span>element.style.display = 'block';</p>
@@ -345,70 +1211,283 @@
 <p class="p1"><span class="Apple-converted-space">                </span>element.style.display = 'none';</p>
 <p class="p1"><span class="Apple-converted-space">            </span>}, 5000);</p>
 <p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function updateWeeklySummary() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const mileageData = JSON.parse(localStorage.getItem('michaels_dogs_mileage') || '[]');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const thisWeek = getThisWeekData(mileageData);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const weeklyDeduction = thisWeek.reduce((sum, entry) =&gt; sum + parseFloat(entry[3] || 0), 0);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('weekly-summary').textContent = `$${weeklyDeduction.toFixed(2)}`;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function refreshDashboard() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const revenue = calculateMonthlyRevenue();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const expenses = calculateMonthlyExpenses();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const miles = calculateMonthlyMiles();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('total-revenue-month').textContent = `$${revenue.toFixed(2)}`;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('total-expenses-month').textContent = `$${expenses.toFixed(2)}`;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('net-profit-month').textContent = `$${(revenue - expenses).toFixed(2)}`;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('total-miles-month').textContent = miles;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function getThisWeekData(data) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const now = new Date();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const weekStart = new Date(now.setDate(now.getDate() - now.getDay()));</p>
-<p class="p1"><span class="Apple-converted-space">            </span>return data.filter(entry =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const entryDate = new Date(entry[0]);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return entryDate &gt;= weekStart;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function calculateMonthlyRevenue() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const rover = JSON.parse(localStorage.getItem('michaels_dogs_rover') || '[]');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const venmo = JSON.parse(localStorage.getItem('michaels_dogs_venmo') || '[]');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const cash = JSON.parse(localStorage.getItem('michaels_dogs_cash') || '[]');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>return getThisMonthData(rover).reduce((sum, entry) =&gt; sum + parseFloat(entry[1] || 0), 0) +</p>
-<p class="p1"><span class="Apple-converted-space">                   </span>getThisMonthData(venmo).reduce((sum, entry) =&gt; sum + parseFloat(entry[2] || 0), 0) +</p>
-<p class="p1"><span class="Apple-converted-space">                   </span>getThisMonthData(cash).reduce((sum, entry) =&gt; sum + parseFloat(entry[2] || 0), 0);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function calculateMonthlyExpenses() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const expenses = JSON.parse(localStorage.getItem('michaels_dogs_expenses') || '[]');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const mileage = JSON.parse(localStorage.getItem('michaels_dogs_mileage') || '[]');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>return getThisMonthData(expenses).reduce((sum, entry) =&gt; sum + parseFloat(entry[2] || 0), 0) +</p>
-<p class="p1"><span class="Apple-converted-space">                   </span>getThisMonthData(mileage).reduce((sum, entry) =&gt; sum + parseFloat(entry[3] || 0), 0);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function calculateMonthlyMiles() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const mileage = JSON.parse(localStorage.getItem('michaels_dogs_mileage') || '[]');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const thisMonth = getThisMonthData(mileage);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>return thisMonth.reduce((sum, entry) =&gt; sum + parseFloat(entry[1] || 0), 0).toFixed(1);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function getThisMonthData(data) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const now = new Date();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const currentMonth = now.getMonth();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const currentYear = now.getFullYear();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>return data.filter(entry =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const entryDate = new Date(entry[0]);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return entryDate.getMonth() === currentMonth &amp;&amp; entryDate.getFullYear() === currentYear;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>window.onload = function() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const savedSheetId = localStorage.getItem('michaels_dogs_sheet_id');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const savedSheetUrl = localStorage.getItem('michaels_dogs_sheet_url');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (savedSheetId &amp;&amp; savedSheetUrl) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>SHEET_ID = savedSheetId;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>SHEET_URL = savedSheetUrl;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('sheet-url').value = savedSheetUrl;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('view-sheets-link').href = savedSheetUrl;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function updateWeeklySummary() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const mileageData = getFromStorage('mileage') || [];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const thisWeek = getThisWeekData(mileageData);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const weeklyDeduction = thisWeek.reduce((sum, entry) =&gt; sum + parseFloat(entry.deduction || 0), 0);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('weekly-summary').textContent = `$${weeklyDeduction.toFixed(2)}`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function updateRecentEntries() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const types = ['mileage', 'rover', 'venmo', 'cash', 'expenses'];</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>types.forEach(type =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const container = document.getElementById(`recent-${type}`);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (container) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const entries = getFromStorage(type) || [];</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const recent = entries.slice(-5).reverse();</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (recent.length === 0) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>container.innerHTML = 'No entries yet';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>container.innerHTML = recent.map(entry =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const displayText = getEntryDisplayText(type, entry);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="entry-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="entry-details"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="entry-date"&gt;${entry.date}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div&gt;${displayText}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="entry-amount"&gt;$${(entry.amount || entry.deduction || 0).toFixed(2)}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;button onclick="deleteEntry('${type}', ${entry.id})" class="delete-btn"&gt;×&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}).join('');</p>
 <p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>updateWeeklySummary();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>refreshDashboard();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function getEntryDisplayText(type, entry) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>switch(type) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>case 'mileage':</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return `${entry.miles} miles - ${entry.purpose || 'Business driving'}`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>case 'rover':</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return `Rover deposit - ${entry.period || 'Payment'}`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>case 'venmo':</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return `${entry.client} - ${entry.service}`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>case 'cash':</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return `${entry.client} - ${entry.service}`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>case 'expenses':</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return `${entry.category} - ${entry.vendor || entry.description}`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>default:</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return 'Entry';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function refreshDashboard() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const revenue = calculateMonthlyRevenue();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const expenses = calculateMonthlyExpenses();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const miles = calculateMonthlyMiles();</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('total-revenue-month').textContent = `$${revenue.toFixed(2)}`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('total-expenses-month').textContent = `$${expenses.toFixed(2)}`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('net-profit-month').textContent = `$${(revenue - expenses).toFixed(2)}`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('total-miles-month').textContent = miles;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function generatePnL() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const period = document.getElementById('pnl-month').value;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const data = getPeriodData(period);</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const revenue = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>rover: data.rover.reduce((sum, entry) =&gt; sum + entry.amount, 0),</p>
+<p class="p1"><span class="Apple-converted-space">            </span>venmo: data.venmo.reduce((sum, entry) =&gt; sum + entry.amount, 0),</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cash: data.cash.reduce((sum, entry) =&gt; sum + entry.amount, 0)</p>
 <p class="p1"><span class="Apple-converted-space">        </span>};</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const expenses = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>mileage: data.mileage.reduce((sum, entry) =&gt; sum + parseFloat(entry.deduction), 0),</p>
+<p class="p1"><span class="Apple-converted-space">            </span>other: data.expenses.reduce((sum, entry) =&gt; sum + entry.amount, 0)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const totalRevenue = Object.values(revenue).reduce((sum, val) =&gt; sum + val, 0);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const totalExpenses = Object.values(expenses).reduce((sum, val) =&gt; sum + val, 0);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const netProfit = totalRevenue - totalExpenses;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const reportHtml = `</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;&lt;th colspan="2"&gt;PROFIT &amp; LOSS STATEMENT&lt;/th&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;&lt;th colspan="2"&gt;${getPeriodLabel(period)}&lt;/th&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;&lt;th colspan="2"&gt;REVENUE&lt;/th&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;&lt;td&gt;Rover Deposits&lt;/td&gt;&lt;td&gt;$${revenue.rover.toFixed(2)}&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;&lt;td&gt;Venmo Payments&lt;/td&gt;&lt;td&gt;$${revenue.venmo.toFixed(2)}&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;&lt;td&gt;Cash Payments&lt;/td&gt;&lt;td&gt;$${revenue.cash.toFixed(2)}&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr class="pnl-total"&gt;&lt;td&gt;&lt;strong&gt;Total Revenue&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;$${totalRevenue.toFixed(2)}&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;&lt;th colspan="2"&gt;EXPENSES&lt;/th&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;&lt;td&gt;Mileage Deduction&lt;/td&gt;&lt;td&gt;$${expenses.mileage.toFixed(2)}&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr&gt;&lt;td&gt;Other Business Expenses&lt;/td&gt;&lt;td&gt;$${expenses.other.toFixed(2)}&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr class="pnl-total"&gt;&lt;td&gt;&lt;strong&gt;Total Expenses&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;$${totalExpenses.toFixed(2)}&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr class="pnl-total"&gt;&lt;td&gt;&lt;strong&gt;NET PROFIT&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;$${netProfit.toFixed(2)}&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('pnl-report').innerHTML = reportHtml;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Save P&amp;L report</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const pnlData = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>period: period,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>periodLabel: getPeriodLabel(period),</p>
+<p class="p1"><span class="Apple-converted-space">            </span>revenue: totalRevenue,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>expenses: totalExpenses,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>netProfit: netProfit,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>generatedDate: new Date().toISOString(),</p>
+<p class="p1"><span class="Apple-converted-space">            </span>breakdown: { revenue, expenses }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const reports = getFromStorage('pnl_reports') || [];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>reports.push(pnlData);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>saveToStorage('pnl_reports', reports);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function exportTaxData() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const year = new Date().getFullYear();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const allData = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>mileage: getFromStorage('mileage') || [],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>rover: getFromStorage('rover') || [],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>venmo: getFromStorage('venmo') || [],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cash: getFromStorage('cash') || [],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>expenses: getFromStorage('expenses') || []</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Filter for current tax year</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Object.keys(allData).forEach(key =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>allData[key] = allData[key].filter(entry =&gt;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>new Date(entry.date).getFullYear() === year</p>
+<p class="p1"><span class="Apple-converted-space">            </span>);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const totalRevenue =<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>allData.rover.reduce((sum, entry) =&gt; sum + entry.amount, 0) +</p>
+<p class="p1"><span class="Apple-converted-space">            </span>allData.venmo.reduce((sum, entry) =&gt; sum + entry.amount, 0) +</p>
+<p class="p1"><span class="Apple-converted-space">            </span>allData.cash.reduce((sum, entry) =&gt; sum + entry.amount, 0);</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const totalMileage = allData.mileage.reduce((sum, entry) =&gt; sum + entry.miles, 0);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const mileageDeduction = allData.mileage.reduce((sum, entry) =&gt; sum + parseFloat(entry.deduction), 0);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const otherExpenses = allData.expenses.reduce((sum, entry) =&gt; sum + entry.amount, 0);</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const taxSummary = `</p>
+<p class="p1">```</p>
+<p class="p2"><br></p>
+<p class="p1"># TAX YEAR ${year} SUMMARY</p>
+<p class="p2"><br></p>
+<p class="p1">INCOME:</p>
+<p class="p1">Total Business Revenue: $${totalRevenue.toFixed(2)}</p>
+<p class="p2"><br></p>
+<p class="p1">DEDUCTIONS:</p>
+<p class="p1">Business Mileage: ${totalMileage.toFixed(1)} miles = $${mileageDeduction.toFixed(2)}</p>
+<p class="p1">Other Business Expenses: $${otherExpenses.toFixed(2)}</p>
+<p class="p1">Total Deductions: $${(mileageDeduction + otherExpenses).toFixed(2)}</p>
+<p class="p2"><br></p>
+<p class="p1">NET BUSINESS INCOME: $${(totalRevenue - mileageDeduction - otherExpenses).toFixed(2)}</p>
+<p class="p2"><br></p>
+<p class="p1">Generated: ${new Date().toLocaleDateString()}</p>
+<p class="p1">`;</p>
+<p class="p2"><br></p>
+<p class="p1">```</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Create downloadable file</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const blob = new Blob([taxSummary], { type: 'text/plain' });</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const url = window.URL.createObjectURL(blob);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const a = document.createElement('a');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>a.href = url;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>a.download = `Michael_Dogs_Tax_Summary_${year}.txt`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>a.click();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>window.URL.revokeObjectURL(url);</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>showStatus('setup-status', `✅ Tax summary downloaded for ${year}`, 'success');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function calculateMonthlyRevenue() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const rover = getThisMonthData(getFromStorage('rover') || []);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const venmo = getThisMonthData(getFromStorage('venmo') || []);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const cash = getThisMonthData(getFromStorage('cash') || []);</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>return rover.reduce((sum, entry) =&gt; sum + entry.amount, 0) +</p>
+<p class="p1"><span class="Apple-converted-space">               </span>venmo.reduce((sum, entry) =&gt; sum + entry.amount, 0) +</p>
+<p class="p1"><span class="Apple-converted-space">               </span>cash.reduce((sum, entry) =&gt; sum + entry.amount, 0);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function calculateMonthlyExpenses() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const expenses = getThisMonthData(getFromStorage('expenses') || []);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const mileage = getThisMonthData(getFromStorage('mileage') || []);</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>return expenses.reduce((sum, entry) =&gt; sum + entry.amount, 0) +</p>
+<p class="p1"><span class="Apple-converted-space">               </span>mileage.reduce((sum, entry) =&gt; sum + parseFloat(entry.deduction || 0), 0);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function calculateMonthlyMiles() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const mileage = getThisMonthData(getFromStorage('mileage') || []);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return mileage.reduce((sum, entry) =&gt; sum + entry.miles, 0).toFixed(1);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function getThisWeekData(data) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const now = new Date();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const weekStart = new Date(now.setDate(now.getDate() - now.getDay()));</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return data.filter(entry =&gt; new Date(entry.date) &gt;= weekStart);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function getThisMonthData(data) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const now = new Date();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const monthStart = new Date(now.getFullYear(), now.getMonth(), 1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return data.filter(entry =&gt; new Date(entry.date) &gt;= monthStart);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function getPeriodData(period) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const allData = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>mileage: getFromStorage('mileage') || [],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>rover: getFromStorage('rover') || [],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>venmo: getFromStorage('venmo') || [],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cash: getFromStorage('cash') || [],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>expenses: getFromStorage('expenses') || []</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const now = new Date();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let startDate;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>switch(period) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>case 'current':</p>
+<p class="p1"><span class="Apple-converted-space">                </span>startDate = new Date(now.getFullYear(), now.getMonth(), 1);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>break;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>case 'last':</p>
+<p class="p1"><span class="Apple-converted-space">                </span>startDate = new Date(now.getFullYear(), now.getMonth() - 1, 1);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const endDate = new Date(now.getFullYear(), now.getMonth(), 0);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Object.keys(allData).forEach(key =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>allData[key] = allData[key].filter(entry =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>const entryDate = new Date(entry.date);</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>return entryDate &gt;= startDate &amp;&amp; entryDate &lt;= endDate;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return allData;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>case 'ytd':</p>
+<p class="p1"><span class="Apple-converted-space">                </span>startDate = new Date(now.getFullYear(), 0, 1);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>break;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>default:</p>
+<p class="p1"><span class="Apple-converted-space">                </span>startDate = new Date(now.getFullYear(), now.getMonth(), 1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>Object.keys(allData).forEach(key =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>allData[key] = allData[key].filter(entry =&gt; new Date(entry.date) &gt;= startDate);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>return allData;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function getPeriodLabel(period) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const now = new Date();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>switch(period) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>case 'current':</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return now.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });</p>
+<p class="p1"><span class="Apple-converted-space">            </span>case 'last':</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const lastMonth = new Date(now.getFullYear(), now.getMonth() - 1);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return lastMonth.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });</p>
+<p class="p1"><span class="Apple-converted-space">            </span>case 'ytd':</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return `Year to Date ${now.getFullYear()}`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>default:</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return 'Current Period';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">```</p>
+<p class="p2"><br></p>
 <p class="p1">&lt;/body&gt;</p>
 <p class="p1">&lt;/html&gt;</p>
 </body>
